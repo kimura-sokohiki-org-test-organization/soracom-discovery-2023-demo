@@ -10,7 +10,7 @@ env:
   COVERAGE: jp
   SORACOM_GROUP_ID_STG: discovery2023-stg
   SORACOM_GROUP_ID_PROD: discovery2023-prod
-
+  
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
