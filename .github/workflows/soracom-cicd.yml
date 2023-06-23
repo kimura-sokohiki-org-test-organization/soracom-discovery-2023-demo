@@ -9,7 +9,7 @@ env:
   SORALET_ID: discovery2023-demo
   COVERAGE: jp
   SORACOM_GROUP_ID_STG: discovery2023-stg
-  SORACOM_GROUP_ID_STG: discovery2023-prod
+  SORACOM_GROUP_ID_PROD: discovery2023-prod
 
 jobs:
   build-and-test:
@@ -78,4 +78,4 @@ jobs:
           soracom_coverage: ${{ env.COVERAGE }}
           soracom_soralet_code_srn: ${{ steps.upload.outputs.soralet_srn }}
           soracom_soralet_direction: uplink
-          soracom_group_id: ${{ env.SORACOM_GROUP_ID_STG }}
+          soracom_group_id: ${{ env.SORACOM_GROUP_ID_PROD }}
