@@ -32,3 +32,5 @@ So,this CI/CD workflow works as below.
 1. If you push changes to `master` or `staging` branch, build and upload a soralet to SORACOM Orbit
 2. If you push changes to `master` branch, deploy a soralet to a specified SIM group
 3. A soralet built from `staging` branch will be deployed to `staging` group, and a soralet built from `master` branch will be deployed to `production` group.
+
+update for staging
