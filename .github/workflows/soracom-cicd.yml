@@ -69,7 +69,7 @@ jobs:
           soracom_soralet_code_srn: ${{ steps.upload.outputs.soralet_srn }}
           soracom_soralet_direction: uplink
           soracom_group_id: ${{ env.SORACOM_GROUP_ID_STG }}
-          soracom_soralet_enable: true
+          soracom_soralet_enabled: true
       - name: deploy production
         uses: kenichiro-kimura/action-soracom-configure-orbit@1.0.1
         if: github.ref == 'refs/heads/master'
@@ -80,4 +80,4 @@ jobs:
           soracom_soralet_code_srn: ${{ steps.upload.outputs.soralet_srn }}
           soracom_soralet_direction: uplink
           soracom_group_id: ${{ env.SORACOM_GROUP_ID_PROD }}
-          soracom_soralet_enable: true
+          soracom_soralet_enabled: true
