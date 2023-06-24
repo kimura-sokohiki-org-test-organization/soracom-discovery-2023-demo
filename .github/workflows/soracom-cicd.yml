@@ -8,8 +8,6 @@ on:
 env:
   SORALET_ID: discovery2023-demo
   COVERAGE: jp
-  SORACOM_GROUP_ID_STG: c3b887a0-d352-4340-b4d7-ba385d358fb1
-  SORACOM_GROUP_ID_PROD: 3597a061-d7ad-4198-8b8f-b8f1d4ab8c75
   
 jobs:
   build-and-test:
@@ -68,7 +66,7 @@ jobs:
           soracom_coverage: ${{ env.COVERAGE }}
           soracom_soralet_code_srn: ${{ steps.upload.outputs.soralet_srn }}
           soracom_soralet_direction: uplink
-          soracom_group_id: ${{ env.SORACOM_GROUP_ID_STG }}
+          soracom_group_id: ${{ secrets.SORACOM_GROUP_ID_STG }}
           soracom_soralet_enabled: true
       - name: deploy production
         uses: kenichiro-kimura/action-soracom-configure-orbit@1.1.0
@@ -79,5 +77,5 @@ jobs:
           soracom_coverage: ${{ env.COVERAGE }}
           soracom_soralet_code_srn: ${{ steps.upload.outputs.soralet_srn }}
           soracom_soralet_direction: uplink
-          soracom_group_id: ${{ env.SORACOM_GROUP_ID_PROD }}
+          soracom_group_id: ${{ secrets.SORACOM_GROUP_ID_PROD }}
           soracom_soralet_enabled: true
